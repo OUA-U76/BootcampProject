@@ -83,21 +83,29 @@ yukarıdaki kanallardan düzenli olarak iletişim halinde bulunduk.
 
 **Sprint board update**: 
 - Sprint board screenshotları: 
-......
+[Backlog 1](https://drive.google.com/file/d/1m6ReZgmFPZvPD0UV0c8ToVo4sC8g7hTC/view?usp=sharing)
 
 - **Ürün Durumu**: 
-......
+- Ekran görüntüleri:
+[Screenshot 1](https://drive.google.com/file/d/1e87LV_SsDGj91MuWT27ueyHzBKKeT5K7/view?usp=drive_link)
+
 
 - **Sprint Review**: 
-
    Alınan kararlar: 
-......
+  - Ürüne karar verildi ve oyunun hikayesi yazıldı. 
+  - Hikayeye uygun olarak ana karakter ve düşman seçildi. 
+  - Karakterin scriptleri ve animasyonlarını düzenlendi. 2.Sprinte iyileştirmelere devam edilecek.
+  - Ana karakterin atış mekanağının scripti yazıldı. Gerekli iyileştirmeler için karakterin hazırlanmasını beklenmekte.
+  - Düşman karakterin AI hazırlandı. 2.Sprinte iyileştirmelere devam edilecek.
+  - NPC'nin karaktere verdiği zararı gözlemleyebilmek için can barı hazırlandı. 2.Sprinte UI-UX çalışmalarına devam edilecek.
+  - Oyunun geçeceği alanlar belirlendi ve haritanın 3d modellemeye başlandı. 2.Sprinte iyileştirmelere devam edilecek.
+
 
 - **Sprint Retrospective:**
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır
+  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
   - Birbiri ile bağlantılı görevlerde iletişim kanallarının daha sık kullanılması kararı alınmıştır.
 
 **Diğer Notlar**:
-......
+İlk etepta ürünün ana hatları oluşturulması hedeflendi. İleri spritlerde oyunun hikayesinin projeye daha net işlenmesi hedefleniyor.
 
 ---
