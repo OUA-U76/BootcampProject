@@ -10,6 +10,10 @@ public class Controller : MonoBehaviour
     public CharacterController controller;
     public Animator animator;
 
+    [Header("Weapon")]
+    public GameObject Weapon;
+
+
     [Header("Movement")]
     public float speed = 1f;
     public float gravity = -9.10f;
@@ -30,7 +34,7 @@ public class Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Weapon.SetActive(false);
     }
 
     // Update is called once per frame
@@ -83,6 +87,21 @@ public class Controller : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+        Gun();
+    }
+    void Gun()
+    {
+        if(Input.GetKeyDown(KeyCode.Z))
+        {
+            animator.SetBool("weapon", true);
+            Weapon.SetActive(true);
+        }
+        if(Input.GetKeyDown(KeyCode.X))
+        {
+            animator.SetBool("weapon", false);
+            Weapon.SetActive(false);
+        }
     }
 
     }
