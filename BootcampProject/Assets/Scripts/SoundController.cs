@@ -14,14 +14,11 @@ public class SoundController : MonoBehaviour
         {
             soundSlider.value = PlayerPrefs.GetFloat("SoundVolume");
             AudioListener.volume = PlayerPrefs.GetFloat("SoundVolume");
-            print("SoundVolume is set" + "Sound Value: " + soundSlider.value);
         }
         else
         {
             soundSlider.value = 0.5f;
             AudioListener.volume = 0.5f;
-            print("SoundVolume is not set" + "Sound Value: " + soundSlider.value);
-
         }
     }
     private void Update() 
