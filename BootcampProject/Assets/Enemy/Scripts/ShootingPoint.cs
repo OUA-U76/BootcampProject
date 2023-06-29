@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
-
 public class ShootingPoint : MonoBehaviour
 {
     Transform lazerTransform;
@@ -22,20 +18,10 @@ public class ShootingPoint : MonoBehaviour
         {
             Vector3 direction = position - transform.position;
             Quaternion targetRotation = Quaternion.LookRotation(direction);
-
-            // Yayýlma açýsýný belirleyin (örneðin, 45 derece)
             float spreadAngle = 45f;
-
-            // Rastgele bir yayýlma açýsý oluþturun
             float randomSpread = Random.Range(-spreadAngle, spreadAngle);
-
-            // Yayýlan rotasyonu hesaplayýn
             Quaternion spreadRotation = Quaternion.AngleAxis(randomSpread, Vector3.up);
-
-            // Hedef rotasyonu ile yayýlan rotasyonu birleþtirin
             Quaternion finalRotation = targetRotation * spreadRotation;
-
-            // Silahýn rotasyonunu düzgün bir þekilde dönüþtürün
             transform.rotation = Quaternion.Lerp(transform.rotation, finalRotation, Time.deltaTime * 20);
         }
 

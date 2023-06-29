@@ -25,6 +25,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] Transform muzzleFlashPosition;
 
     NavMeshAgent navmesh;
+    bool isDeath = false;
     void Start()
     {
         navmesh=GetComponent<NavMeshAgent>();
@@ -41,35 +42,40 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        distance = Vector3.Distance(transform.position, target.position);
-        position = new Vector3(target.position.x, transform.position.y, target.position.z);
-        enemyAnimator.SetFloat("distance", distance);
-
-        if (distance > 30)
-            navmesh.destination = target.position;
-
-        if (distance > 40)
-            navmesh.speed = 6;
-        else if(distance<35)
-            navmesh.speed = 3.5f;
-
-        if (distance < 30) 
+        if (!isDeath)
         {
-            transform.LookAt(position);
+            distance = Vector3.Distance(transform.position, target.position);
+            position = new Vector3(target.position.x, transform.position.y, target.position.z);
+            enemyAnimator.SetFloat("distance", distance);
 
-            shootingTimer += Time.deltaTime;
-            if (shootingTimer >= shootingInterval)
+            if (distance > 30)
+                navmesh.destination = target.position;
+
+            if (distance > 40)
+                navmesh.speed = 6;
+            else if (distance < 35 && distance > 30)
+                navmesh.speed = 3.5f;
+            else if (distance<30)
+                navmesh.speed = 0f;
+
+            if (distance < 30)
             {
-                enemyAnimator.SetTrigger("combat");
+                transform.LookAt(position);
 
-                EnemyShooting();
-                shootingTimer = 0f;
+                shootingTimer += Time.deltaTime;
+                if (shootingTimer >= shootingInterval)
+                {
+                    enemyAnimator.SetTrigger("combat");
+
+                    EnemyShooting();
+                    shootingTimer = 0f;
+                }
             }
-        }
-        else 
-        {
-            enemyAnimator.SetTrigger("idle");
+            else
+            {
+                enemyAnimator.SetTrigger("idle");
 
+            }
         }
     }
 
@@ -78,6 +84,7 @@ public class Enemy : MonoBehaviour
         enemyHP -= damage;
         if (enemyHP <= 0f)
         {
+            isDeath = true;
             Die();
         }
     }
