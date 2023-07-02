@@ -109,3 +109,41 @@ yukarıdaki kanallardan düzenli olarak iletişim halinde bulunduk.
 İlk etepta ürünün ana hatları oluşturulması hedeflendi. İleri spritlerde oyunun hikayesinin projeye daha net işlenmesi hedefleniyor.
 
 ---
+
+# Sprint 2
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
+
+- **Daily Scrum**: [Daily Scrum](https://docs.google.com/spreadsheets/d/1M5HUkwOQ7C692hApmFKyAMhwDrqG0ynr7d0Ycvj-gkY/edit?usp=sharing) toplantılarını ekip ile aldığımız kararlar doğrultusunda devam ettirmekteyiz. Teknik nedenlerden dolayı 1.Sprinten farklı olarak projenin takibini Trello uygulamasının yanı sıra Miro uygulamasınıdanda devam ettirmekteyiz.
+
+**Sprint board update**: 
+- Sprint board screenshotları: 
+[Backlog 1](https://drive.google.com/file/d/1wC9_CosT8MTrlT_e9sGTe1ahfDVjF6Lj/view?usp=sharing)
+
+
+- **Ürün Durumu**: 
+- Ekran görüntüleri:
+[Screenshot 1](https://drive.google.com/file/d/1GbAouEiLbtXe9rSk0o0WAvdhsQ7sqni_/view?usp=drive_link)
+  
+- **Sprint Review**: 
+Alınan kararlar:
+-Ürünün işleyiş şeması çıkarıldı.
+-Giriş ekranı tasarımına başlandı. Yeni oyun ismini düşünüldü ancak eski isimle devam edilmesine karar verildi.
+-UX UI çalışması yapıldı. Sahne tasarımının tamamlanmasından sonra devam edecek.
+-Karakterin kullanacağı silahlar belirlendi ve atış mekaniği ve animasyonları düzenleniyor.
+-Düşman mekaniği düzenlendi ve çeşitliği artırıldı.
+-Projenin 3d modellemesine devam ediliyor. Kullanılacak mataryerler ve shaderlar hazırlanıyor.
+
+- **Sprint Retrospective:**
+Bayram dolayısıyla projenin işleyişinin biraz yavaşladığının ancak bir soranki sprinte projeye eski tenposunda çalışmaya devam edip daha aktif iletişim kurmamız gerektiğini düşündük.
+
+---
+
+## Product Backlog URL
+
+[Unity Team 76 Miro Backlog Board](https://miro.com/app/board/uXjVM96jwuE=/)
+
+-**Diğer Notlar**:
+Projenin hafta başındaki durumuna göre kapsamı daratmak veya düzenlemeye gitmek düşünülmektedir.
+
+---
