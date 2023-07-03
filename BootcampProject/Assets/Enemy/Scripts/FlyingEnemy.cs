@@ -55,13 +55,13 @@ public class FlyingEnemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")&& collision.gameObject.CompareTag("Ground"))
         {
             isRetreating = true;
-            Vector3 moveDirection = (target.position - transform.position).normalized;
-            Vector3 reverseDirection = -moveDirection;
-            Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
+            //Vector3 moveDirection = (target.position - transform.position).normalized;
+            //Vector3 reverseDirection = -moveDirection;
+            //Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
         }
     }
 }
