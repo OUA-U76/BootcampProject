@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class aiming : MonoBehaviour
@@ -25,7 +24,7 @@ public class aiming : MonoBehaviour
         {
             animator.SetBool("aim", false);
         }
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButton("Fire1"))
         {
             animator.SetBool("fire", true);
         }
