@@ -6,7 +6,7 @@ public class aiming : MonoBehaviour
     public Animator animator;
     public float range = 1000f;
     public GameObject hitEffect;
-
+    public GameObject mainCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class aiming : MonoBehaviour
         }
         if(Input.GetButton("Fire1"))
         {
+            Shoot();
             animator.SetBool("fire", true);
         }
         else
@@ -34,5 +35,13 @@ public class aiming : MonoBehaviour
         }
 
 
+    }
+    void Shoot()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, range))
+        {
+            Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        }
     }
 }
