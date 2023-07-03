@@ -156,6 +156,22 @@ namespace StarterAssets
         {
             _hasAnimator = TryGetComponent(out _animator);
 
+            if (_hasAnimator)
+            {
+                bool isMouse2Pressed = Input.GetButton("Fire2");
+                    _animator.SetBool("weapon", isMouse2Pressed);
+
+                if (_animator.GetBool("weapon")&&_animator.GetFloat("Speed")>0.1)
+                {
+                    _animator.SetBool("shoot", true);
+                    MoveSpeed = 1f;
+                }
+                else
+                {
+                    _animator.SetBool("shoot", false);
+                }
+
+            }
             JumpAndGravity();
             GroundedCheck();
             Move();

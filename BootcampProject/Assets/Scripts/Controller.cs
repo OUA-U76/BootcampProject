@@ -17,10 +17,10 @@ public class Controller : MonoBehaviour
     [Header("Movement")]
     public float speed = 1f;
     public float gravity = -9.10f;
-    public float jumpHeight = 1f;
+    public float jumpHeight = 1.5f;
 
     [Header("Ground Check")]
-    public Transform ground_check;
+    public Transform ground_check; 
     public float ground_distance = 0.4f;
     public LayerMask ground_mask;
 
@@ -57,7 +57,7 @@ public class Controller : MonoBehaviour
 
         controller.Move(move * speed * Time.deltaTime);
 
-        if(Input.GetKey(KeyCode.W) && Input.GetKey(KeyCode.LeftShift))
+        if(Input.GetKey(KeyCode.LeftShift))
         {
             speed = 3f;
             animator.SetBool("run", true);
