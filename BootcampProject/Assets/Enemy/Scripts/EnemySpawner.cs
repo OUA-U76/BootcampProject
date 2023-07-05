@@ -3,10 +3,14 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] GameObject enemy;
-    float timer = 4f;
+    public float timer;
     Transform spawnerLocation;
+
+    Timer ttimer;
     void Start()
     {
+        ttimer = FindObjectOfType<Timer>();
+        timer = 10f;
         spawnerLocation= GetComponent<Transform>();
     }
     private void Update()
@@ -15,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
             timer -= Time.deltaTime;
         else 
         {
-            timer = 4f;
+            timer = ttimer.enemyTimer;
             EnemySpawn();
         }
     }
