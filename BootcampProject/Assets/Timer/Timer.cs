@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
         string textTime = string.Format("{0:0}:{1:00}", minutes, seconds);
         if (time <= 150)
         {
-            dfcText.text = "Kolay";
+            dfcText.text = "Easy";
             dfcText.color = Color.green;
             dfc.color=Color.green;
             emoji.sprite = emojies[0];
@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
         }
         else if (time <= 300 && time > 150)
         {
-            dfcText.text = "Orta";
+            dfcText.text = "Medium";
             dfcText.color = Color.yellow;
             dfc.color = Color.yellow;
             emoji.sprite = emojies[1];
@@ -46,7 +46,7 @@ public class Timer : MonoBehaviour
         }
         else if (time <= 450 && time > 300)
         {
-            dfcText.text = "Zor";
+            dfcText.text = "Hard";
             dfcText.color = Color.red;
             dfc.color = Color.red;
             emoji.sprite = emojies[2];
@@ -54,7 +54,7 @@ public class Timer : MonoBehaviour
         }
         else if (time <= 600 && time > 450)
         {
-            dfcText.text = "Çok Zor";
+            dfcText.text = "Very Hard";
             dfcText.color = Color.red;
             dfc.color = Color.red;
             emoji.sprite = emojies[3];
@@ -63,7 +63,7 @@ public class Timer : MonoBehaviour
         }
         else if (time > 600)
         {
-            dfcText.text = "Seni Ýzliyorum";
+            dfcText.text = "I'm watching you";
             dfcText.color = Color.grey;
             dfc.color = Color.black;
             emoji.sprite = emojies[4];
