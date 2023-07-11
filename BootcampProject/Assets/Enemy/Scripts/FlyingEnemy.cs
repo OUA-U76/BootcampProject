@@ -16,13 +16,20 @@ public class FlyingEnemy : MonoBehaviour
     private Vector3 retreatDirection;
 
     private NavMeshAgent navmesh;
-
+    private void Awake()
+    {
+        if (target == null)
+        {
+            target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
     void Start()
     {
         navmesh = GetComponent<NavMeshAgent>();
         rb = GetComponent<Rigidbody>();
         initialPosition = transform.position; 
         retreatDirection = (initialPosition - target.position).normalized;
+        
     }
 
     void Update()
