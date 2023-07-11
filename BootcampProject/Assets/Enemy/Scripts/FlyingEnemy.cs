@@ -60,15 +60,40 @@ public class FlyingEnemy : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
+    //    {
+    //        isRetreating = true;
+    //        //Vector3 moveDirection = (target.position - transform.position).normalized;
+    //        //Vector3 reverseDirection = -moveDirection;
+    //        //Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
+    //        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
+    //    }
+
+    //    if (collision.gameObject.CompareTag("Player"))
+    //    {
+    //        var aliveObject = collision.gameObject.GetComponent<AliveObject>();
+
+    //        if (aliveObject != null)
+    //        {
+    //            aliveObject.Damage(20);
+    //        }
+    //    }
+    //}
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player")&& collision.gameObject.CompareTag("Ground"))
+        if (other.CompareTag("Player")||other.CompareTag("Player"))
         {
             isRetreating = true;
-            //Vector3 moveDirection = (target.position - transform.position).normalized;
-            //Vector3 reverseDirection = -moveDirection;
-            //Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
-            //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
+        }if (other.CompareTag("Player"))
+        {
+            var aliveObject = other.gameObject.GetComponent<AliveObject>();
+
+               if (aliveObject != null)
+               {
+                     aliveObject.Damage(20);
+               }
         }
     }
 }

@@ -109,13 +109,16 @@ public class Enemy : MonoBehaviour
         if (Physics.Raycast(bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.forward, out hit, bulletDistance))
         {
             if (hit.transform.tag == "Player")
-            {
+            { 
+                var aliveObject=hit.transform.GetComponent<AliveObject>();
                 Debug.Log("Hitted");
                 GameObject Flash = Instantiate(muzzleFlash, muzzleFlashPosition);
                 Destroy(Flash, 0.1f);
-                Player playerHP = hit.transform.GetComponent<Player>();
+                if (aliveObject != null)
+                {
+                    aliveObject.Damage(3);
+                }
                 shootingAudio.Play();
-                playerHP.TakeDamage(20);
             }
         }
     }

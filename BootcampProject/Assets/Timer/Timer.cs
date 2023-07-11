@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,8 +15,12 @@ public class Timer : MonoBehaviour
     [SerializeField] Image bg;
     
     public float enemyTimer;
+    public GameObject boss;
+    public GameObject warningPanel;
     void Start()
     {
+        warningPanel.SetActive(false);
+        boss.SetActive(false);
         slider.maxValue = 600;
         slider.value = 0;
         bg.color = Color.blue;
@@ -69,9 +74,23 @@ public class Timer : MonoBehaviour
             emoji.sprite = emojies[4];
             bg.color = Color.black;
             enemyTimer = 2f;
+            if (warningPanel != null)
+            {
+                warningPanel.SetActive(true);
+                StartCoroutine(waitASec());
+            }
         }
         textT.text = textTime;
         slider.value = time;
         Debug.Log(time);
+        IEnumerator waitASec()
+        {
+            Time.timeScale = 0f;
+            yield return new WaitForSeconds(3f);
+            Destroy(warningPanel);
+            Time.timeScale = 1f;
+            yield return new WaitForSeconds(1f);
+            boss.SetActive(true);
+        }
     }
 }
