@@ -52,11 +52,20 @@ public class Enemy : MonoBehaviour
                 navmesh.destination = target.position;
 
             if (distance > 40)
+            {
                 navmesh.speed = 6;
+                navmesh.enabled = true;
+            }
             else if (distance < 35 && distance > 30)
+            {
                 navmesh.speed = 3.5f;
-            else if (distance<30)
+                navmesh.enabled = true;
+            }
+            else if (distance < 30)
+            {
                 navmesh.speed = 0f;
+                navmesh.enabled = false;
+            }
 
             if (distance < 30)
             {
