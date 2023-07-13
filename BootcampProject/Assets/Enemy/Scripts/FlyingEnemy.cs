@@ -16,6 +16,10 @@ public class FlyingEnemy : MonoBehaviour
     private Vector3 retreatDirection;
 
     private NavMeshAgent navmesh;
+    public GameObject aa;
+    float distance;
+    public GameObject bulletSpawnLocation;
+    RaycastHit hit;
     private void Awake()
     {
         if (target == null)
@@ -29,11 +33,14 @@ public class FlyingEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         initialPosition = transform.position; 
         retreatDirection = (initialPosition - target.position).normalized;
+        distance = Vector3.Distance(target.position, aa.transform.position);
         
     }
 
     void Update()
     {
+        distance = Vector3.Distance(target.position, aa.transform.position);
+        EnemyShooting();
         if (isRetreating)
         {
             rb.velocity = retreatDirection * moveSpeed;
@@ -60,40 +67,37 @@ public class FlyingEnemy : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
         }
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
-    //    {
-    //        isRetreating = true;
-    //        //Vector3 moveDirection = (target.position - transform.position).normalized;
-    //        //Vector3 reverseDirection = -moveDirection;
-    //        //Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
-    //        //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
-    //    }
-
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
-    //        var aliveObject = collision.gameObject.GetComponent<AliveObject>();
-
-    //        if (aliveObject != null)
-    //        {
-    //            aliveObject.Damage(20);
-    //        }
-    //    }
-    //}
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player")||other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
         {
             isRetreating = true;
-        }if (other.CompareTag("Player"))
-        {
-            var aliveObject = other.gameObject.GetComponent<AliveObject>();
-
-               if (aliveObject != null)
-               {
-                     aliveObject.Damage(20);
-               }
+            //Vector3 moveDirection = (target.position - transform.position).normalized;
+            //Vector3 reverseDirection = -moveDirection;
+            //Quaternion targetRotation = Quaternion.LookRotation(reverseDirection, Vector3.up);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 1f);
         }
+    }
+    void EnemyShooting()
+    {
+        if (Physics.Raycast(bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.forward, out hit, 30))
+        {
+            if (hit.transform.tag == "Player")
+            { if (distance <= 2)
+                {
+                    var aliveObject = hit.transform.GetComponent<AliveObject>();
+                    Debug.Log("Hitted");
+                    if (aliveObject != null)
+                    {
+                        aliveObject.Damage(10);
+                    }
+                }
+            }
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.forward * 30);
     }
 }

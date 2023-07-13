@@ -82,7 +82,6 @@ public class Timer : MonoBehaviour
         }
         textT.text = textTime;
         slider.value = time;
-        Debug.Log(time);
         IEnumerator waitASec()
         {
             Time.timeScale = 0f;
