@@ -158,8 +158,8 @@ namespace StarterAssets
 
             if (_hasAnimator)
             {
-                bool isMouse2Pressed = Input.GetButton("Fire2");
-                    _animator.SetBool("weapon", isMouse2Pressed);
+                bool isMouse1Pressed = Input.GetButton("Fire1");
+                    _animator.SetBool("weapon", isMouse1Pressed);
 
                 if (_animator.GetBool("weapon")&&_animator.GetFloat("Speed")>0.1)
                 {
