@@ -32,4 +32,7 @@ public class Weapon : MonoBehaviour
             Destroy(impactGO, 2f);
         }
     }
+    public void DamageIncrease(){
+        damage = damage + 10;
+    }
 }

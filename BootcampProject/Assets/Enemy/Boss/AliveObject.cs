@@ -52,6 +52,16 @@ public class AliveObject : MonoBehaviour
     }
 
     /**
+     * Heal this object
+     */
+    public void Heal(float amount)
+    {
+
+        SetHealth(health + amount);
+    
+    }
+
+    /**
      * Sets the health of the object
      * Does not trigger hit cooldowns
      */
