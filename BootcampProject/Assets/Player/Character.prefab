@@ -2010,7 +2010,7 @@ GameObject:
   - component: {fileID: 6219165126151333323}
   m_Layer: 0
   m_Name: Character
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7836,7 +7836,7 @@ MonoBehaviour:
   damage: 10
   range: 100
   PlayerCam: {fileID: 3057455379364167872}
-  bulletImpactEffect: {fileID: 0}
+  bulletImpactEffect: {fileID: 4212237911574779972, guid: f34d53a9f8cd409428b8d1e3addf4807, type: 3}
 --- !u!1001 &6219165125159164712
 PrefabInstance:
   m_ObjectHideFlags: 0
