@@ -179,6 +179,20 @@ public class TriangleBossScript : AliveObject
 
         lastUpdateTime = Time.time;
     }
+    public void takeDamage(float damage)
+    {
+        health -= damage;
+    }
+    public void DecreaseHealth(float amount)
+    {
+    health -= amount;
+
+    // Ölüm kontrolü
+    if (health <= 0.0f)
+    {
+        Kill();
+    }
+    }
     /**
      * Give each phase a random weight for how often they occur
      */

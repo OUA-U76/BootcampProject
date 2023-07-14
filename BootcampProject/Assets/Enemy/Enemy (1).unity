@@ -549,6 +549,7 @@ MonoBehaviour:
   retreatDistance: 2
   desiredHeight: 10
   retreatDuration: 10
+  enemyHP: 100
   aa: {fileID: 0}
   bulletSpawnLocation: {fileID: 0}
 --- !u!54 &1041677471
@@ -1027,7 +1028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7077181277425263474, guid: e3253dd8ee7a4f749a081352784d16d7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7077181277425263475, guid: e3253dd8ee7a4f749a081352784d16d7, type: 3}
       propertyPath: m_RootOrder
@@ -1704,6 +1705,14 @@ PrefabInstance:
     - target: {fileID: 3057455379364167879, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.3750002
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938687173022841353, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
+      propertyPath: health
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938687173022841353, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
+      propertyPath: maxHealth
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 5400816562938942544, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
       propertyPath: m_LocalPosition.y

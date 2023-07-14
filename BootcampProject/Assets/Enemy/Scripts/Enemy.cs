@@ -100,7 +100,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         enemyAnimator.SetBool("enemyDeath", true);
-        Destroy(gameObject,60f);
+        Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision) //Bu metot sadece hasar aldigi zaman ne oldugunu gormek icin yazildi. Silah ates ettigi zaman raycast icin hit.transform.tag=="Enemy" seklinde olucak. "Kaan".

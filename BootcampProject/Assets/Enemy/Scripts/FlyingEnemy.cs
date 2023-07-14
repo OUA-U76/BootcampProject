@@ -9,6 +9,7 @@ public class FlyingEnemy : MonoBehaviour
     public float desiredHeight = 10f; 
     public float retreatDuration = 10f; 
 
+    public float enemyHP = 50f;
     private Rigidbody rb;
     private Vector3 initialPosition; 
     private bool isRetreating = false; 
@@ -99,5 +100,17 @@ public class FlyingEnemy : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawRay(bulletSpawnLocation.transform.position, bulletSpawnLocation.transform.forward * 30);
+    }
+    public void takeDamage(float damage)  //Silahlarin verdigi hasara gore hasar girilecek ve silahlarda hasar veren script icinde kullanilacak. "Kaan"
+    {                                        //Dusman icin kullanilan tag=Enemy
+        enemyHP -= damage;
+        if (enemyHP <= 0f)
+        {
+            Die();
+        }
+    }
+    void Die()
+    {
+        Destroy(gameObject);
     }
 }
