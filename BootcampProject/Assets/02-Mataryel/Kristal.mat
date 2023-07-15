@@ -54,5 +54,5 @@ Material:
     - _ScroolSpeed: 0.003
     m_Colors:
     - _BazRenk: {r: 0.316542, g: 0.5188679, b: 0.4983186, a: 0}
-    - _I_lt_Renk: {r: 0.6471755, g: 0.5805743, b: 0.8962264, a: 0}
+    - _I_lt_Renk: {r: 0.8962264, g: 0.07376392, b: 0.039456423, a: 0}
   m_BuildTextureStacks: []

@@ -18,7 +18,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 04_Neon
-    second: {fileID: -7126193129781715291, guid: 7ee290c88843d2c49be639ef4dea8a73, type: 3}
+    second: {fileID: 2100000, guid: 86ed4e456e75fe9429a266f01439c53e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -53,7 +53,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: 10_WhiteCity
-    second: {fileID: 2100000, guid: 9201a71990ef09e43832e3712d93d5c1, type: 2}
+    second: {fileID: 2100000, guid: 954d1713532c8ec4ca67beca3398d8e6, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
