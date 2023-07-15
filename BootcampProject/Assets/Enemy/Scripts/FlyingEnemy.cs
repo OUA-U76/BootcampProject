@@ -70,7 +70,7 @@ public class FlyingEnemy : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Groud"))
         {
             isRetreating = true;
             //Vector3 moveDirection = (target.position - transform.position).normalized;
