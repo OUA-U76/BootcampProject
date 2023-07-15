@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class SaveData : MonoBehaviour
 {
@@ -23,6 +22,7 @@ public class SaveData : MonoBehaviour
         _name = nameInput.text;
         PlayerPrefs.SetString("Name", _name);
         Debug.Log("Name set to: " + _name);
+        SceneManager.LoadScene("model");
     }
 
     void SetScore(int newScore)
