@@ -7,10 +7,7 @@ public class RiverKiller : MonoBehaviour
     public GameObject player;   
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            AliveObject aa = player.GetComponent<AliveObject>();
-            aa.Damage(100000000000);
-        }
+        AliveObject aa=player.GetComponent<AliveObject>();
+        aa.Damage(100);
     }
 }
