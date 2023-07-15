@@ -104,6 +104,17 @@ public class TriangleBossScript : AliveObject
     /**
      * controls the bosses behavior, calls on the frame.
      */
+
+    public void DecreaseHealth(float amount)
+    {
+        health -= amount;
+
+        // Ölüm kontrolü
+        if (health <= 0.0f)
+        {
+            Kill();
+        }
+    }
     void FixedUpdate()
     {
         // TODO: This should really be handled in the parent class

@@ -24,8 +24,22 @@ public class Weapon : MonoBehaviour
         if(Physics.Raycast(PlayerCam.transform.position, PlayerCam.transform.forward, out hit, range)){
             Debug.Log(hit.transform.name);
             Target target = hit.transform.GetComponent<Target>();
-            if(target != null){
-                target.TargetTakeDamage(damage);
+            Enemy enemy = hit.transform.GetComponent<Enemy>();
+            FlyingEnemy fenemy = hit.transform.GetComponent<FlyingEnemy>();
+            TriangleBossScript benemy = hit.transform.GetComponent<TriangleBossScript>();
+            if (enemy != null)
+            {
+                enemy.takeDamage(damage);
+            }
+            if (fenemy != null)
+            {
+                fenemy.takeDamage(damage);
+                Debug.Log("FLY");
+            }
+            if (benemy != null)
+            {
+                benemy.DecreaseHealth(damage);
+                Debug.Log("deasd");
             }
 
             GameObject impactGO = Instantiate(bulletImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
