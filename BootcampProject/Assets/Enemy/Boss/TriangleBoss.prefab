@@ -840,8 +840,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossHealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 8929006646202376245, guid: 0fb88fff9583df54ab69ebf171545a9b, type: 3}
+      propertyPath: bar
+      value: 
+      objectReference: {fileID: 54764647996973894}
+    - target: {fileID: 8929006646202376245, guid: 0fb88fff9583df54ab69ebf171545a9b, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 7077181277425263479}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb88fff9583df54ab69ebf171545a9b, type: 3}
+--- !u!1 &54764647996973894 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492870603539146479, guid: 0fb88fff9583df54ab69ebf171545a9b, type: 3}
+  m_PrefabInstance: {fileID: 6546509007763080617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &54764648181939705 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6492870603391842384, guid: 0fb88fff9583df54ab69ebf171545a9b, type: 3}

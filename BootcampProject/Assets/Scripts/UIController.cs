@@ -1,25 +1,25 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+[FormerlySerializedAs("ResumeButton")]
 [Header ("SERIALIZED FIELDS")]
-[SerializeField] Button PauseButton;
-[SerializeField] Button ResumeButton;
-[SerializeField] GameObject PausePanel;
+[SerializeField] private Button resumeButton;
+[SerializeField] private GameObject pausePanel;
 
-bool isPaused = false;
+private bool _isPaused = false;
 
 private void Start() 
 {
-    PauseButton.onClick.AddListener(PauseGame);
-    ResumeButton.onClick.AddListener(ResumeGame);
+    resumeButton.onClick.AddListener(ResumeGame);
 }
 private void Update() 
 {
     if(Input.GetKeyDown(KeyCode.Escape))
     {
-        if(isPaused)
+        if(_isPaused)
         {
             ResumeGame();
         }
@@ -30,18 +30,16 @@ private void Update()
     }
 }
 
-public void PauseGame()
+private void PauseGame()
 {
-    isPaused = true;
+    _isPaused = true;
     Time.timeScale = 0;
-    PausePanel.SetActive(true);
-    PauseButton.gameObject.SetActive(false);
+    pausePanel.SetActive(true);
 }
 public void ResumeGame()
 {
-    isPaused = false;
+    _isPaused = false;
     Time.timeScale = 1;
-    PausePanel.SetActive(false);
-    PauseButton.gameObject.SetActive(true);
+    pausePanel.SetActive(false);
 }
 }
