@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.Serialization;
 
 public class StartScreenUIController : MonoBehaviour
-{
-
-[SerializeField] Button OptionsButton;
+{ [SerializeField] Button OptionsButton;
 [SerializeField] Button OkButton;
 [SerializeField] Button OkLeaderBoardButton;
 [SerializeField] Button QuitButton;
@@ -16,6 +11,7 @@ public class StartScreenUIController : MonoBehaviour
 [SerializeField] Button leaderBoardButton;
 [SerializeField] Animator OptionsAnimator;
 [SerializeField] Animator LeaderBoardAnimator;
+[SerializeField] private GameObject NameInputPanel;
 bool OptionsOpen = false;
 bool LeaderBoardOpen = false;
 
@@ -95,6 +91,6 @@ void QuitGame()
 }
 void StartGame()
 {
-    SceneManager.LoadScene("Scene0");
+    NameInputPanel.SetActive(true);
 }
 }
