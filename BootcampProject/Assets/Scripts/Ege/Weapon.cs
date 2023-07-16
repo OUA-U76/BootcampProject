@@ -10,8 +10,8 @@ public class Weapon : MonoBehaviour
     private Camera PlayerCam;
     [SerializeField]
     private GameObject bulletImpactEffect;
+    public AudioSource gunSound;
 
-    
     // Update is called once per frame
     void Update()
     {
@@ -44,6 +44,7 @@ public class Weapon : MonoBehaviour
 
             GameObject impactGO = Instantiate(bulletImpactEffect, hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impactGO, 2f);
+            gunSound.Play();
         }
     }
     public void DamageIncrease(){
