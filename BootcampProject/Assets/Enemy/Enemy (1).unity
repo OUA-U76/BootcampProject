@@ -549,6 +549,7 @@ MonoBehaviour:
   retreatDistance: 2
   desiredHeight: 10
   retreatDuration: 10
+  enemyHP: 50
   aa: {fileID: 0}
   bulletSpawnLocation: {fileID: 0}
 --- !u!54 &1041677471
@@ -1690,7 +1691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4459268756332742854, guid: 46df525bf46f1d0448673045c7e750fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46df525bf46f1d0448673045c7e750fa, type: 3}
@@ -1702,12 +1703,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3057455379364167879, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3057455379364167879, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.3750002
       objectReference: {fileID: 0}
     - target: {fileID: 5400816562938942544, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400816562938942544, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.3750002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5400816564399784454, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5400816564399784454, guid: e753445b9ca60234aa53c2c2e3320dd8, type: 3}
       propertyPath: m_LocalPosition.y

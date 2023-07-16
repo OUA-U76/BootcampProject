@@ -37,7 +37,7 @@ public class Timer : MonoBehaviour
         slider.value = 0;
         bg.color = Color.blue;
 
-
+        enemyTimer = 1;
         //Materyal
         rend[0] = changMaterial[0].GetComponent<Renderer>();
         rend[1] = changMaterial[1].GetComponent<Renderer>();
@@ -62,7 +62,7 @@ public class Timer : MonoBehaviour
             dfc.color=Color.green;
             emoji.sprite = emojies[0];
             bg.color = Color.blue;
-            enemyTimer = 30f;
+            enemyTimer = 60f;
 
             //
             rend[0].material = material[0];
@@ -77,7 +77,7 @@ public class Timer : MonoBehaviour
             dfcText.color = Color.yellow;
             dfc.color = Color.yellow;
             emoji.sprite = emojies[1];
-            enemyTimer = 25f;
+            enemyTimer = 55f;
 
             //
             rend[0].material = material[0];
@@ -92,7 +92,7 @@ public class Timer : MonoBehaviour
             dfcText.color = Color.red;
             dfc.color = Color.red;
             emoji.sprite = emojies[2];
-            enemyTimer = 20f;
+            enemyTimer = 50f;
 
             //
             rend[0].material = material[1];
@@ -108,7 +108,7 @@ public class Timer : MonoBehaviour
             dfc.color = Color.red;
             emoji.sprite = emojies[3];
             bg.color = Color.red;
-            enemyTimer = 15f;
+            enemyTimer = 45f;
 
             //
             rend[0].material = material[1];
@@ -124,7 +124,7 @@ public class Timer : MonoBehaviour
             dfc.color = Color.black;
             emoji.sprite = emojies[4];
             bg.color = Color.black;
-            enemyTimer = 0f ;
+            enemyTimer = 19000000f ;
 
             //
             rend[0].material = material[2];
