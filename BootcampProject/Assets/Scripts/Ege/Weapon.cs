@@ -10,13 +10,28 @@ public class Weapon : MonoBehaviour
     private Camera PlayerCam;
     [SerializeField]
     private GameObject bulletImpactEffect;
+    [SerializeField]
+    private float reloadTime = 1f;
+
+    private bool canShoot = true;
+    private float reloadTimer = 0f;
     public AudioSource gunSound;
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButton("Fire1")){
+        if(canShoot && Input.GetButton("Fire1")){
             Shoot();
+            canShoot = false;
+            reloadTimer = reloadTime;
+            Debug.Log(Time.deltaTime);
+        }
+        if (!canShoot){
+            reloadTimer -= Time.deltaTime * 1000;
+            if (reloadTimer <= 0f)
+            {
+                canShoot = true;
+            }
         }
     }
     private void Shoot(){
