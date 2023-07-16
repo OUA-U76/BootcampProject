@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,17 @@ public class Timer : MonoBehaviour
     public float enemyTimer;
     public GameObject boss;
     public GameObject warningPanel;
+
+
+    //Materyal
+    public Material[] material;
+    private Renderer[] rend=new Renderer[5];
+
+    public GameObject[] changMaterial;
+    //
+
+    public float secondTimeRemaining = 3;
+
     void Start()
     {
         warningPanel.SetActive(false);
@@ -24,10 +36,21 @@ public class Timer : MonoBehaviour
         slider.maxValue = 600;
         slider.value = 0;
         bg.color = Color.blue;
+
+
+        //Materyal
+        rend[0] = changMaterial[0].GetComponent<Renderer>();
+        rend[1] = changMaterial[1].GetComponent<Renderer>();
+        rend[2] = changMaterial[2].GetComponent<Renderer>();
+        rend[3] = changMaterial[3].GetComponent<Renderer>();
+        rend[4] = changMaterial[4].GetComponent<Renderer>();
+        //
+
     }
 
     void Update()
     {
+
         float time =timerValue+Time.time;
         int minutes=Mathf.FloorToInt(time/60);
         int seconds=Mathf.FloorToInt(time-minutes*60);
@@ -39,7 +62,14 @@ public class Timer : MonoBehaviour
             dfc.color=Color.green;
             emoji.sprite = emojies[0];
             bg.color = Color.blue;
-            enemyTimer = 7f;
+            enemyTimer = 30f;
+
+            //
+            rend[0].material = material[0];
+            rend[1].material = material[0];
+            rend[2].material = material[0];
+            rend[3].material = material[0];
+            rend[4].material = material[0];
         }
         else if (time <= 300 && time > 150)
         {
@@ -47,7 +77,14 @@ public class Timer : MonoBehaviour
             dfcText.color = Color.yellow;
             dfc.color = Color.yellow;
             emoji.sprite = emojies[1];
-            enemyTimer = 6f;
+            enemyTimer = 25f;
+
+            //
+            rend[0].material = material[0];
+            rend[1].material = material[0];
+            rend[2].material = material[0];
+            rend[3].material = material[0];
+            rend[4].material = material[0];
         }
         else if (time <= 450 && time > 300)
         {
@@ -55,7 +92,14 @@ public class Timer : MonoBehaviour
             dfcText.color = Color.red;
             dfc.color = Color.red;
             emoji.sprite = emojies[2];
-            enemyTimer = 5f;
+            enemyTimer = 20f;
+
+            //
+            rend[0].material = material[1];
+            rend[1].material = material[1];
+            rend[2].material = material[1];
+            rend[3].material = material[1];
+            rend[4].material = material[1];
         }
         else if (time <= 600 && time > 450)
         {
@@ -64,7 +108,14 @@ public class Timer : MonoBehaviour
             dfc.color = Color.red;
             emoji.sprite = emojies[3];
             bg.color = Color.red;
-            enemyTimer = 4f;
+            enemyTimer = 15f;
+
+            //
+            rend[0].material = material[1];
+            rend[1].material = material[1];
+            rend[2].material = material[1];
+            rend[3].material = material[1];
+            rend[4].material = material[1];
         }
         else if (time > 600)
         {
@@ -73,23 +124,31 @@ public class Timer : MonoBehaviour
             dfc.color = Color.black;
             emoji.sprite = emojies[4];
             bg.color = Color.black;
-            enemyTimer = 2f;
+            enemyTimer = 0f ;
+
+            //
+            rend[0].material = material[2];
+            rend[1].material = material[2];
+            rend[2].material = material[2];
+            rend[3].material = material[2];
+            rend[4].material = material[2];
+
             if (warningPanel != null)
             {
                 warningPanel.SetActive(true);
-                StartCoroutine(waitASec());
+                if (secondTimeRemaining > 0)
+                {
+                    secondTimeRemaining -= Time.deltaTime;
+                }
+                else
+                {
+                    Destroy(warningPanel);
+                    boss.SetActive(true);
+                }
             }
         }
         textT.text = textTime;
         slider.value = time;
-        IEnumerator waitASec()
-        {
-            Time.timeScale = 0f;
-            yield return new WaitForSeconds(3f);
-            Destroy(warningPanel);
-            Time.timeScale = 1f;
-            yield return new WaitForSeconds(1f);
-            boss.SetActive(true);
-        }
+        
     }
 }
