@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /**
  * Controls the behavior of the game objects that need to be destroyed or have a health bar
@@ -96,6 +97,7 @@ public class AliveObject : MonoBehaviour
     {
         if (dead)
         {
+            SceneManager.LoadScene(5);
             return;
         }
 

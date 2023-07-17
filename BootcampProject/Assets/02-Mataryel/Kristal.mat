@@ -24,7 +24,7 @@ Material:
   m_Shader: {fileID: -6465566751694194690, guid: debda4503ef640f4186cb3065b7676a0, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -48,11 +48,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _FresnelPower: 6
-    - _NoiseScale: 600
+    - _NoiseScale: 150
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ScroolSpeed: 0.003
     m_Colors:
     - _BazRenk: {r: 0.316542, g: 0.5188679, b: 0.4983186, a: 0}
-    - _I_lt_Renk: {r: 0.8962264, g: 0.07376392, b: 0.039456423, a: 0}
+    - _I_lt_Renk: {r: 0.6471755, g: 0.5805743, b: 0.8962264, a: 0}
   m_BuildTextureStacks: []
