@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01-Model/model.unity
     guid: 48af4326eb7f7734cb8e8a0c743e6e54
+  - enabled: 1
+    path: Assets/01-Model/devamet.unity
+    guid: af4171c878def2b45aa5537dd4d4061f
+  - enabled: 1
+    path: Assets/01-Model/kazan.unity
+    guid: 53f4449d926729e4fb70c4655f159d54
+  - enabled: 1
+    path: Assets/01-Model/kaybet 1.unity
+    guid: 2c90233913932404fb90c79331c26232
+  - enabled: 1
+    path: Assets/01-Model/Boss Fight.unity
+    guid: fad772cc0a9322c42b2de508d503fab1
   m_configObjects: {}

@@ -66,7 +66,7 @@ public class Timer : MonoBehaviour
         {
             dfcText.text = "Easy";
             dfcText.color = Color.green;
-            dfc.color=Color.green;
+            dfc.color = Color.green;
             emoji.sprite = emojies[0];
             bg.color = Color.blue;
             enemyTimer = 60f;
@@ -126,62 +126,13 @@ public class Timer : MonoBehaviour
         }
         else if (time > 600)
         {
-            dfcText.text = "I'm watching you";
-            dfcText.color = Color.grey;
-            dfc.color = Color.black;
-            emoji.sprite = emojies[4];
-            bg.color = Color.black;
-            enemyTimer = 19000000f ;
 
-            //
-            rend[0].material = material[2];
-            rend[1].material = material[2];
-            rend[2].material = material[2];
-            rend[3].material = material[2];
-            rend[4].material = material[2];
-
-            areuSure.SetActive(true);
-            if (areuSure != null)
-            {
-                Time.timeScale = 0f;
-            }
-            if (areuSureBool)
-            {
-                Time.timeScale = 1f;
-                if (warningPanel != null)
-                {
-                    warningPanel.SetActive(true);
-                    if (secondTimeRemaining > 0)
-                    {
-                        secondTimeRemaining -= Time.deltaTime;
-                    }
-                    else
-                    {
-                        Destroy(warningPanel);
-                        boss.SetActive(true);
-                    }
-                }
-            }
-           
+            SceneManager.LoadScene(3);
         }
+
         textT.text = textTime;
         slider.value = time;
         
     }
 
-    public void uareSure()
-    {
-        areuSureBool = true;
-        Destroy(areuSure);
-    }
-
-    public void turnMainMenu()
-    {
-        SceneManager.LoadScene(0);
-    }
-    public void worldSaved()
-    {
-        losePanel.SetActive(true);
-        areuSure.SetActive(false);
-    }
 }
