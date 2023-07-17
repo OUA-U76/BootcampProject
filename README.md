@@ -114,6 +114,7 @@ yukarıdaki kanallardan düzenli olarak iletişim halinde bulunduk.
 # Sprint 2
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 150 puanlık backlog bulunmaktadır. [User Story'de](https://docs.google.com/spreadsheets/d/1ak8zcs4Huh5ptVBZh0K8ncnJSBlHs2G6r49MueTVxhs/edit?usp=sharing) belirtiği gibi ikinci sprint için 40 puanlık backlog tanımladık.
 
 - **Daily Scrum**: [Daily Scrum](https://docs.google.com/spreadsheets/d/1M5HUkwOQ7C692hApmFKyAMhwDrqG0ynr7d0Ycvj-gkY/edit?usp=sharing) toplantılarını ekip ile aldığımız kararlar doğrultusunda devam ettirmekteyiz. Teknik nedenlerden dolayı 1.Sprinten farklı olarak projenin takibini Trello uygulamasının yanı sıra Miro uygulamasından da devam ettirmekteyiz.
 
@@ -146,6 +147,7 @@ Projenin hafta başındaki durumuna göre kapsamı daraltmak veya düzenlemeye g
 # Sprint 3
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
+- - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 150 puanlık backlog bulunmaktadır. [User Story'de](https://docs.google.com/spreadsheets/d/1ak8zcs4Huh5ptVBZh0K8ncnJSBlHs2G6r49MueTVxhs/edit?usp=sharing) belirtiği gibi üçüncü sprint için 40 puanlık backlog tanımladık. Şuanda tamamlanan 30 puanlık backlog tamamlandı. Son düzenlemeler ile ürün teslim tarihine 40 puanlık backlog tamamlamayı hedeflemekteyiz.
 
 - **Daily Scrum**: [Daily Scrum](https://docs.google.com/spreadsheets/d/1M5HUkwOQ7C692hApmFKyAMhwDrqG0ynr7d0Ycvj-gkY/edit?usp=sharing) toplantılarını ekip ile aldığımız kararlar doğrultusunda devam ettirmekteyiz.
 
