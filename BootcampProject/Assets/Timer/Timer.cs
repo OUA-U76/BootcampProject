@@ -2,6 +2,7 @@ using System.Collections;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
@@ -28,14 +29,20 @@ public class Timer : MonoBehaviour
     //
 
     public float secondTimeRemaining = 3;
-
+    public GameObject areuSure;
+    public bool areuSureBool;
+    public GameObject losePanel;
     void Start()
     {
+        losePanel.SetActive(false);
+        areuSure.SetActive(false);
         warningPanel.SetActive(false);
         boss.SetActive(false);
         slider.maxValue = 600;
         slider.value = 0;
         bg.color = Color.blue;
+
+        areuSureBool = false;
 
         enemyTimer = 1;
         //Materyal
@@ -107,7 +114,7 @@ public class Timer : MonoBehaviour
             dfcText.color = Color.red;
             dfc.color = Color.red;
             emoji.sprite = emojies[3];
-            bg.color = Color.red;
+            bg.color = Color.grey;
             enemyTimer = 45f;
 
             //
@@ -133,22 +140,48 @@ public class Timer : MonoBehaviour
             rend[3].material = material[2];
             rend[4].material = material[2];
 
-            if (warningPanel != null)
+            areuSure.SetActive(true);
+            if (areuSure != null)
             {
-                warningPanel.SetActive(true);
-                if (secondTimeRemaining > 0)
+                Time.timeScale = 0f;
+            }
+            if (areuSureBool)
+            {
+                Time.timeScale = 1f;
+                if (warningPanel != null)
                 {
-                    secondTimeRemaining -= Time.deltaTime;
-                }
-                else
-                {
-                    Destroy(warningPanel);
-                    boss.SetActive(true);
+                    warningPanel.SetActive(true);
+                    if (secondTimeRemaining > 0)
+                    {
+                        secondTimeRemaining -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        Destroy(warningPanel);
+                        boss.SetActive(true);
+                    }
                 }
             }
+           
         }
         textT.text = textTime;
         slider.value = time;
         
+    }
+
+    public void uareSure()
+    {
+        areuSureBool = true;
+        Destroy(areuSure);
+    }
+
+    public void turnMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+    public void worldSaved()
+    {
+        losePanel.SetActive(true);
+        areuSure.SetActive(false);
     }
 }
