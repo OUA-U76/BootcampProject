@@ -153,28 +153,32 @@ Projenin hafta başındaki durumuna göre kapsamı daraltmak veya düzenlemeye g
 [Backlog 1](https://drive.google.com/file/d/1-PlOoCNEuyEqeK8lagZKB_vOyb1yhkyq/view?usp=sharing)
 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**:
  - Ekran görüntüleri:
 [Screenshot 1](https://drive.google.com/file/d/1A82-54w9SW3Yce6wwa1uq4DfI0T9rtal/view?usp=drive_link)
 
 - **Sprint Review**: 
    Alınan kararlar: 
   - Ürünün minimap için haritası çıkarıldı.
-  - Karakter kontrolur değişti.
+  - Karakter kontrolör değişti.
   - Yapılan 3D model üzerinden ürünlerin boyutlarına karar verildi.
-  - Oyunun gerçekleşeceği atmosyer üzerine teyitleşildi.
+  - Oyunun gerçekleşeceği atmosfer üzerine teyitleşirdi.
   - Oyuna düşman olarak boss eklendi.
-  - Oyuna geri sayım sayacı eklendi. Zaman doldukça oyunun zorlaşmasına  karar verdik.
-  - Seviyeler ilerledikçe doğaya verdiğimiz zararı gözlemlemek için seviyeyle birlikte mataryellerinde değişmesine karar verdik.
-  - Ürün teslim tarihine ürünü yetiştireilmek için kapsamda daraltmata gitmeye karar verildi. 
+  - Oyuna geri sayım sayacı eklendi. Zaman ilerledikçe oyunun zorlaşmasına karar verdik.
+  - Seviyeler ilerledikçe doğaya verdiğimiz zararı gözlemlemek için seviyeyle birlikte materyallerinde değişmesine karar verdik.
+  - Ürün teslim tarihine ürünü yetiştirebilmek için kapsamda daraltmaya gitmeye karar verildi. 
 
 - **Sprint Retrospective:**
 
-  - Takım üyelerinin gelecek projelerde yaşadıkları sorun, hata veya gecikmelere neden olabilcek durumları ekiple paylaşmanın önemi vurgulandı.
+  - Takım üyelerinin gelecek projelerde yaşadıkları sorun, hata veya gecikmelere neden olabilecek durumları ekiple paylaşmanın önemi vurgulandı.
 
  -**Diğer Notlar**:
-- Oyunumuz zamana karşı olup puan sistemide bu şekilde işlemektedir. Oyunda belirli alanlarda güçlendiriciler bulunmaktadır. Zaman ilerledikçe düşman sayısı artmaktadır. Ve budurumun çevreyede etkileri bulunmaktadır.
-- Oyunda sorulan soruya göre final değişmektedie. İlerleyen aşamalarda varyant sayısında artış yapılması planlanmaktadır.
+- Oyunumuz zamana karşı olup puan sistemi de bu şekilde işlemektedir. Oyunda belirli alanlarda güçlendiriciler bulunmaktadır. Zaman ilerledikçe düşman sayısı artmaktadır. Ve bu durumun çevreye de etkileri bulunmaktadır.
+- Oyunda sorulan soruya göre final değişmektedir. İlerleyen aşamalarda varyant sayısında artış yapılması planlanmaktadır.
 - Oyunda reklamlar sahneyle bir bütün şekilde yerlerine karar verildi. En kısa sürede sistemle bağlantıları sağlanacak.
+- Projemiz büyük bir bölümünü kendimiz modelledik. Hareketli materyaller için shaderlarımızı kendimiz yaptık. Kullandığımız [hazır assetlere](https://docs.google.com/presentation/d/1DiM9Tj3aK0YT54cXGEbT3FDOyKUg7DkobBJDrtPG-mk/edit?usp=drive_link) buradan ulaşabilirsiniz.
+
+ -**Süreç Geneli**:
+ [Proje kapanış raporuna](https://docs.google.com/document/d/1OmGltQbiItrAYsOtMvvCLExn34T5AwVcZfGZSvQX_S8/edit?usp=sharing&resourcekey=0-zrzSgBFK1WABuMY8ZKRENw) buradan ulaşabilirsiniz.
 
 
