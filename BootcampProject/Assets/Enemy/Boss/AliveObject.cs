@@ -18,6 +18,7 @@ public class AliveObject : MonoBehaviour
 
     public delegate void DeathHandler();
     public event DeathHandler onDeath;
+    public GameObject aa;
 
     protected bool dead = false;
 
@@ -74,7 +75,10 @@ public class AliveObject : MonoBehaviour
         {
             health = 0.0f;
 
-            Kill();
+            if (aa!=null)
+                SceneManager.LoadScene(7);
+            else
+                Kill();
         }
         else if (health > maxHealth)
         {
@@ -97,7 +101,7 @@ public class AliveObject : MonoBehaviour
     {
         if (dead)
         {
-            SceneManager.LoadScene(5);
+            
             return;
         }
 

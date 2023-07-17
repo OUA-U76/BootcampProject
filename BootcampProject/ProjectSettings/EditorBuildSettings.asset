@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01-Model/Boss Fight.unity
     guid: fad772cc0a9322c42b2de508d503fab1
+  - enabled: 1
+    path: Assets/01-Model/kaybet 2.unity
+    guid: f94b8b41a75c847459426d8f898815ce
   m_configObjects: {}

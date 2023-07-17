@@ -17,8 +17,7 @@ public class Timer : MonoBehaviour
     [SerializeField] Image bg;
     
     public float enemyTimer;
-    public GameObject boss;
-    public GameObject warningPanel;
+  
 
 
     //Materyal
@@ -29,20 +28,13 @@ public class Timer : MonoBehaviour
     //
 
     public float secondTimeRemaining = 3;
-    public GameObject areuSure;
-    public bool areuSureBool;
-    public GameObject losePanel;
     void Start()
     {
-        losePanel.SetActive(false);
-        areuSure.SetActive(false);
-        warningPanel.SetActive(false);
-        boss.SetActive(false);
+     
         slider.maxValue = 600;
         slider.value = 0;
         bg.color = Color.blue;
 
-        areuSureBool = false;
 
         enemyTimer = 1;
         //Materyal

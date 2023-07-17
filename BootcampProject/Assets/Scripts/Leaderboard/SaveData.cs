@@ -22,7 +22,7 @@ public class SaveData : MonoBehaviour
         _name = nameInput.text;
         PlayerPrefs.SetString("Name", _name);
         Debug.Log("Name set to: " + _name);
-        SceneManager.LoadScene("model");
+        SceneManager.LoadScene(1);
     }
 
     void SetScore(int newScore)

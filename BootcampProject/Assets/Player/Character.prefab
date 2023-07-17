@@ -304,7 +304,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3675256969167609167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.375, z: -2}
+  m_LocalPosition: {x: 1, y: 1.582, z: -2.3146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7720,7 +7720,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024954037881806452}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.375, z: -2}
+  m_LocalPosition: {x: 1, y: 1.582, z: -2.3146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7791,7 +7791,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6024954038571616290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 1.375, z: -4}
+  m_LocalPosition: {x: 1, y: 1.582, z: -4.3146973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7958,7 +7958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8245416573099845445}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.207, z: -0.3147}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8197,12 +8197,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8245416573099845445}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bd0f27e42edc4ac41a024c7d1b22fc6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 100000
   currentHealth: 0
   healthBar: {fileID: 0}
 --- !u!114 &3442552042926745476
@@ -8217,11 +8217,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8d06a2060e37384f80f7d7a3b8c4eb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10000
-  maxHealth: 10000
+  health: 100
+  maxHealth: 100
   invulnerable: 0
   hitCooldown: 0.5
   deathSound: {fileID: 0}
+  aa: {fileID: 0}
 --- !u!114 &1832791095607187699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8238,6 +8239,7 @@ MonoBehaviour:
   range: 100
   PlayerCam: {fileID: 3675256969167609165}
   bulletImpactEffect: {fileID: 4212237911574779972, guid: f34d53a9f8cd409428b8d1e3addf4807, type: 3}
+  reloadTime: 1
   gunSound: {fileID: 0}
 --- !u!114 &1832791095719684074
 MonoBehaviour:

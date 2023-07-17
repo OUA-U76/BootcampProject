@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class NEWTIMER : MonoBehaviour
@@ -46,6 +47,11 @@ public class NEWTIMER : MonoBehaviour
                 boss.SetActive(true);
             }
         }
+        if (boss == null)
+        {
+            SceneManager.LoadScene(5);
+        }
+
         textT.text = textTime;
         slider.value = time;
 
