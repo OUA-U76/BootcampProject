@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private GameObject bulletImpactEffect;
     [SerializeField]
-    private float reloadTime = 100f;
+    private float reloadTime = 1f;
 
     private bool canShoot = true;
     private float reloadTimer = 0f;
@@ -19,15 +19,15 @@ public class Weapon : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
+    {
         if(canShoot && Input.GetButton("Fire1")){
             Shoot();
             canShoot = false;
             reloadTimer = reloadTime;
+            Debug.Log(Time.deltaTime);
         }
-        //Debug.Log(Time.deltaTime * 1000f);
         if (!canShoot){
-            reloadTimer -= Time.deltaTime * 0.1f;
+            reloadTimer -= Time.deltaTime * 1000;
             if (reloadTimer <= 0f)
             {
                 canShoot = true;
