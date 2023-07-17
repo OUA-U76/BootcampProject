@@ -142,3 +142,39 @@ yukarıdaki kanallardan düzenli olarak iletişim halinde bulunduk.
 Projenin hafta başındaki durumuna göre kapsamı daraltmak veya düzenlemeye gitmek düşünülmektedir.
 
 ---
+
+# Sprint 3
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
+
+- **Daily Scrum**: [Daily Scrum](https://docs.google.com/spreadsheets/d/1M5HUkwOQ7C692hApmFKyAMhwDrqG0ynr7d0Ycvj-gkY/edit?usp=sharing) toplantılarını ekip ile aldığımız kararlar doğrultusunda devam ettirmekteyiz.
+
+- **Sprint board update**: Sprint board screenshotları: 
+[Backlog 1](https://drive.google.com/file/d/1-PlOoCNEuyEqeK8lagZKB_vOyb1yhkyq/view?usp=sharing)
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+ - Ekran görüntüleri:
+[Screenshot 1](https://drive.google.com/file/d/1A82-54w9SW3Yce6wwa1uq4DfI0T9rtal/view?usp=drive_link)
+
+- **Sprint Review**: 
+   Alınan kararlar: 
+  - Ürünün minimap için haritası çıkarıldı.
+  - Karakter kontrolur değişti.
+  - Yapılan 3D model üzerinden ürünlerin boyutlarına karar verildi.
+  - Oyunun gerçekleşeceği atmosyer üzerine teyitleşildi.
+  - Oyuna düşman olarak boss eklendi.
+  - Oyuna geri sayım sayacı eklendi. Zaman doldukça oyunun zorlaşmasına  karar verdik.
+  - Seviyeler ilerledikçe doğaya verdiğimiz zararı gözlemlemek için seviyeyle birlikte mataryellerinde değişmesine karar verdik.
+  - Ürün teslim tarihine ürünü yetiştireilmek için kapsamda daraltmata gitmeye karar verildi. 
+
+- **Sprint Retrospective:**
+
+  - Takım üyelerinin gelecek projelerde yaşadıkları sorun, hata veya gecikmelere neden olabilcek durumları ekiple paylaşmanın önemi vurgulandı.
+
+ -**Diğer Notlar**:
+- Oyunumuz zamana karşı olup puan sistemide bu şekilde işlemektedir. Oyunda belirli alanlarda güçlendiriciler bulunmaktadır. Zaman ilerledikçe düşman sayısı artmaktadır. Ve budurumun çevreyede etkileri bulunmaktadır.
+- Oyunda sorulan soruya göre final değişmektedie. İlerleyen aşamalarda varyant sayısında artış yapılması planlanmaktadır.
+- Oyunda reklamlar sahneyle bir bütün şekilde yerlerine karar verildi. En kısa sürede sistemle bağlantıları sağlanacak.
+
+
