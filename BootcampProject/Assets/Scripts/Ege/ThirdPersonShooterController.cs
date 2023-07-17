@@ -22,6 +22,8 @@ public class ThirdPersonShooterController : MonoBehaviour
         starterAssetsInputs = GetComponent<StarterAssetsInputs>();
         thirdPersonController = GetComponent<ThirdPersonController>();
         animator = GetComponent<Animator>();
+        
+
     }
 
     private void Update(){
@@ -32,12 +34,12 @@ public class ThirdPersonShooterController : MonoBehaviour
             debugTransform.position = raycastHit.point;
             mouseWorldPosition = raycastHit.point;
         }
-
+        animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
         if(starterAssetsInputs.aim){
             aimVirtualCamera.gameObject.SetActive(true);
             thirdPersonController.SetSensitivity(aimSensivity);
             thirdPersonController.SetRotateOnMove(false);
-            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
+            //animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 1f, Time.deltaTime * 10f));
 
             Vector3 worldAimTarget = mouseWorldPosition;
             worldAimTarget.y = transform.position.y;
@@ -48,7 +50,7 @@ public class ThirdPersonShooterController : MonoBehaviour
             aimVirtualCamera.gameObject.SetActive(false);
             thirdPersonController.SetSensitivity(normalSensivity);
             thirdPersonController.SetRotateOnMove(true);
-            animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
+            //animator.SetLayerWeight(1, Mathf.Lerp(animator.GetLayerWeight(1), 0f, Time.deltaTime * 10f));
         }
     }
 }
